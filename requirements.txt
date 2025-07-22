@@ -1,0 +1,11 @@
+streamlit
+yfinance
+pandas
+numpy
+sqlalchemy
+groq
+python-dotenv
+PyPortfolioOpt
+plotly
+requests
+beautifulsoup4
