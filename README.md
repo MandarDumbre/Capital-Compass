@@ -1,145 +1,213 @@
+<div align="center">
 
-<!-- Project Title and Tagline -->
-# Capital‑Compass 📈
-A sleek **Streamlit & Python** application for portfolio optimization and analysis. Capital‑Compass helps users build diversified investment portfolios using modern portfolio theory, run visual analyses, and download optimized allocations.
+# 🧭 **Capital Compass**
+
+### *Navigate Your Investments with Data-Driven Intelligence*
+
+**An advanced portfolio optimization tool applying Modern Portfolio Theory with live market data and AI-powered insights.**
+
+</div>
 
 ---
 
-<!-- Highlighting Key Features -->
+## 🎥 Capital Compass Demo
+
+<a href="https://drive.google.com/file/d/1MWKVONO_JM8jras-fuV9z9Fkzo2eVLEB/view?usp=drive_link" target="_blank">
+<img src="https://drive.google.com/uc?export=view&id=1xjNJw_X_fwWPdYlvsJBdWDBCLeE17dIa" alt="Capital Compass Dashboard Preview" width="920"/>
+</a>
+
+<p align="center">
+  <a href="https://drive.google.com/file/d/1MWKVONO_JM8jras-fuV9z9Fkzo2eVLEB/view?usp=drive_link" target="_blank">
+    ▶️ <strong>Watch the Full Video Demo</strong>
+  </a>
+</p>
+
+---
+
+<div align="center">
+
+🛠️ Built With  
+<p align="center">
+<img alt="Python" src="https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white" />
+<img alt="Streamlit" src="https://img.shields.io/badge/Streamlit-App-ff4b4b?logo=streamlit&logoColor=white" />
+<img alt="Pandas" src="https://img.shields.io/badge/Pandas-Data_Processing-150458?logo=pandas&logoColor=white" />
+<img alt="NumPy" src="https://img.shields.io/badge/NumPy-Scientific_Computing-013243?logo=numpy&logoColor=white" />
+<img alt="Plotly" src="https://img.shields.io/badge/Plotly-Interactive_Charts-3f4f75?logo=plotly&logoColor=white" />
+<img alt="PyPortfolioOpt" src="https://img.shields.io/badge/PyPortfolioOpt-Optimization-8A2BE2?logo=python&logoColor=white" />
+<img alt="yfinance" src="https://img.shields.io/badge/yfinance-Market_Data-008080?logo=yahoo&logoColor=white" />
+<img alt="SQLite" src="https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite&logoColor=white" />
+<img alt="Llama 3" src="https://img.shields.io/badge/Llama_3-AI_Insights-E91E63?logo=meta&logoColor=white" />
+</p>
+</div>
+
+---
+
 ## 🚀 Features
 
-- **Efficient portfolio optimization**  
-  - Calculate risk–return efficient portfolios using historical asset returns  
-  - Support for mean–variance optimization & Sharpe ratio maximization
-
-- **Interactive visualizations**  
-  - Asset return distributions, correlations, and covariance matrix heatmaps  
-  - Efficient frontier display with risk vs. return tradeoffs  
-  - Pie charts showing portfolio weight allocations
-
-- **Customizable inputs**  
-  - Upload your own asset historical data (CSV + daily prices format)  
-  - Adjust portfolio constraints (e.g., weight bounds, risk tolerance, target return)
-
-- **One-click export**  
-  - Download optimized portfolio weights and key metrics as CSV
+| 🔧 Feature                  | ⚡ Description                                                                                               |
+| ---------------------------| ----------------------------------------------------------------------------------------------------------- |
+| 📊 **MPT Optimization**     | Generates three optimal portfolios (Low, Medium, High Risk) based on Modern Portfolio Theory.               |
+| 📈 **Advanced Risk Metrics**| Calculates Sortino Ratio, Max Drawdown, Calmar Ratio, and Value at Risk (VaR) for deep risk analysis.       |
+| 🎲 **Monte Carlo Simulation**| Forecasts future performance using thousands of simulations to show a range of outcomes.                   |
+| 💡 **AI-Powered Insights** | Leverages **Llama 3** via Groq to generate qualitative summaries of portfolio strategies.                   |
+| 🎨 **Interactive Charts**  | Visualizes the **Efficient Frontier**, normalized performance, and Monte Carlo results.                      |
+| 💰 **Discrete Allocation** | Converts percentages into real share quantities based on your investment amount.                            |
+| ⚡ **Data Caching**        | Uses **SQLite** to cache historical stock data, ensuring fast load and fewer API calls.                     |
+| 🌍 **Multi-Market Support**| Includes US and Indian stocks out of the box.                                                              |
 
 ---
 
-<!-- Installation Instructions -->
-## 📦 Installation
+## 🛠️ Technology Stack
 
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/MandarDumbre/Capital-Compass.git
-   cd Capital-Compass
-Install dependencies:
+```text
+Application Framework : Streamlit  
+Core Logic            : Python, PyPortfolioOpt  
+Data Handling         : Pandas, NumPy  
+Data Fetching         : yfinance  
+Database              : SQLite  
+Visualization         : Plotly  
+AI Integration        : Groq API (Llama 3 8B)
+````
 
-bash
-Copy
-Edit
+---
+
+## 📋 Prerequisites
+
+* Python 3.9+
+* pip (Python package manager)
+* A free Groq API Key for AI Insights
+
+---
+
+## 🔧 Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/your-username/capital-compass.git
+cd capital-compass
+
+# 2. Create and activate a virtual environment
+python -m venv venv
+source venv/bin/activate      # On Windows: venv\Scripts\activate
+
+# 3. Install the required dependencies
 pip install -r requirements.txt
-Launch the app:
+```
 
-bash
-Copy
-Edit
+---
+
+## 🧠 API Key Setup
+
+This project uses the Groq API to generate AI insights.
+
+1. Get a free API key from [Groq Console](https://console.groq.com/keys)
+2. Create a file named `.env` in the project root directory
+3. Add this line inside the `.env` file:
+
+```bash
+GROQ_API_KEY="your-api-key-here"
+```
+
+---
+
+## ▶️ Run the App
+
+```bash
 streamlit run main.py
-<!-- Conceptual Overview -->
-🧠 How It Works
-Load your data
+```
 
-CSV file with daily price history (dates as rows, tickers as columns)
+---
 
-Select assets and timeframe
+## 📊 Financial Metrics Overview
 
-Choose which assets to include in the portfolio
+| 🔍 Metric               | 📌 Purpose                                        |
+| ----------------------- | ------------------------------------------------- |
+| **Sharpe Ratio**        | Measures risk-adjusted return. Higher is better.  |
+| **Sortino Ratio**       | Like Sharpe, but focuses only on downside risk.   |
+| **Max Drawdown**        | The largest peak-to-trough drop in the portfolio. |
+| **Calmar Ratio**        | Measures return relative to the Max Drawdown.     |
+| **Value at Risk (VaR)** | Potential daily loss with 95% confidence level.   |
 
-Pick date range to look back for historical returns
+---
 
-Optimization options
+## 🎯 Usage Guide
 
-Define constraints (e.g. weight limits, target returns)
+1. **🚀 Launch the application**
+2. **💼 Enter your investment amount** in the sidebar.
+3. **📈 Select 5–10 stocks** from the list.
+4. **🖱️ Click "Generate Portfolio Analysis"**
+5. **🔎 Explore the outputs:**
 
-Set goal: minimum variance vs. optimum Sharpe ratio
+   * Low, Medium, and High-Risk portfolios with allocation breakdown
+   * AI-generated summary of portfolios
+   * Interactive visualizations
 
-Analyze & Export
+---
 
-Visualize portfolio efficient frontier and allocation breakdowns
+## 🗂️ Project Structure
 
-Download optimized portfolio weights and performance metrics
+```bash
+capital-compass/
+├── main.py                    # Main Streamlit application
+├── requirements.txt           # Project dependencies
+├── .env                       # API Key (you create this)
+├── README.md                  # This file
+└── src/
+    ├── config.py              # Static config data
+    ├── __init__.py
+    ├── data/
+    │   ├── database.py        # DB handling logic
+    │   └── stock_data.db      # SQLite database
+    ├── logic/
+    │   ├── analysis.py        # Fetching + AI logic
+    │   ├── metrics.py         # Custom financial metrics
+    │   └── optimizer.py       # Optimization engine
+    └── ui/
+        └── plots.py           # All visualization components
+```
 
-<!-- Optional: Add visuals or screen recordings of your app -->
-📈 Screenshots
-<!-- Replace the links below with actual image links -->
+---
 
+## 🛡️ Security & Privacy
 
-<!-- User Journey or Usage Steps -->
-💡 Typical Workflow
-Provide cleaned daily price CSV files
+✔️ All processing is **local** — no user data is stored online
+✔️ Stock data via **yfinance** — real-time, reliable API
+✔️ API Key only used for secure Groq requests — stored in `.env`
 
-Choose a timeframe (e.g., past 3 years)
+---
 
-Set constraints (0–100% per asset; full allocation to 100%)
+## 🔮 Roadmap
 
-Run optimization — view result, weights, risk/return metrics
+* [ ] 🧪 **Backtesting Engine**
+* [ ] 💹 **ETFs, Crypto, and Bonds**
+* [ ] 👤 **User Accounts & Tracking**
+* [ ] 🧠 **Factor-Based Optimization**
+* [ ] 📄 **Exportable PDF Reports**
 
-Export the portfolio for real‑world implementation
+---
 
-<!-- Guide for adding new features or forking -->
-🛠️ Customization & Extension
-Swap in alternate optimization methods (e.g., Black‑Litterman, CVaR)
+## 📝 License
 
-Add support for live price feeds or multiple asset classes
+This project is licensed under the **MIT License** — see `LICENSE` for details.
 
-Extend user interface with reporting or scenario‑analysis features
+---
 
-Change weight bounds to allow short positions or leverage
+## 🙏 Acknowledgments
 
-<!-- List of Python packages or dependencies -->
-📋 Requirements
-Python 3.8+
+Big thanks to the creators of these amazing tools:
 
-pandas
+* [Streamlit](https://streamlit.io/)
+* [PyPortfolioOpt](https://pyportfolioopt.readthedocs.io/)
+* [Plotly](https://plotly.com/)
+* [Pandas](https://pandas.pydata.org/)
+* [yfinance](https://github.com/ranaroussi/yfinance)
 
-numpy
+---
 
-cvxpy
+<div align="center">
 
-Streamlit
+⭐ **Star this repo if you find it useful**
+🐛 [Report a Bug](https://github.com/your-username/capital-compass/issues) • ✨ [Request a Feature](https://github.com/your-username/capital-compass/issues)
 
-matplotlib or plotly
+</div>
 
-<!-- Academic or theoretical background -->
-📚 References
-Markowitz Mean–Variance Theory
-
-Portfolio optimization metrics:
-
-Expected Returns
-
-Standard Deviation (Volatility)
-
-Sharpe Ratio
-
-Correlation & Covariance
-
-<!-- Contribution Guidelines -->
-🤝 Contributing
-Fork the repo
-
-Create a feature branch (git checkout -b new-feature)
-
-Add code, tests, and documentation
-
-Open a Pull Request — feedback is welcome!
-
-<!-- How users can reach you or open issues -->
-📬 Contact
-For questions, feature requests, or contributions, feel free to open an issue
-or contact Mandar Dumbre at [dumbremandar@gmail.com].
-
-<!-- Licensing Info -->
-🧭 License
-Distributed under the MIT License.
-Use freely in personal or commercial projects.
